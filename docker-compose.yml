@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    node-chat:
+        container_name: node-chat
+        image: victoraweb/node-chat
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+    webhost:
+        container_name: nginx-node
+        image: nginx
